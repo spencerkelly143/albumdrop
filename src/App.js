@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import albumart from './albumart.jpg';
+import withParallax from './withParallax'
+import Countdown from './countdown'
 import './App.css';
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div className="wrapper2"></div>
+      <div className="wrapper3"></div>
+      <img className='album-art' src={albumart} />
+      <p className='title' style={{transform: 'translateY('+0.45*props.scrollTop+'px)'}}>HOUSTON</p>
+      <Countdown className='countdown' date='April 25, 2020 23:59:59' />
+
+      <div className='tracklist'>
+        <ul>
+          <li>Lift Off (feat. John F. Kennedy)</li>
+          <li>Breaching the Atmosphere</li>
+          <li>Trucking through Space</li>
+          <li>Pop that Bitch Out / / Joe's Interlude </li>
+          <li>Acoustic Guitar</li>
+          <li>Deep Space</li>
+          <li>Outro</li>
+        </ul>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default withParallax(App);
