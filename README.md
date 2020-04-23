@@ -1,3 +1,5 @@
+This project is a single page app announcing the release of an Album. It uses a parallax effect on the countdown timer and title to transition onto the track list page.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
